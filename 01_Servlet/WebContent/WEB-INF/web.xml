@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>01_Servlet</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- 서블릿 매핑 방법 -->
+  <servlet>
+  	<servlet-name>abc</servlet-name>	<!-- 서블릿 이름은 아무렇게나 적어도 상관없다. -->
+  	<servlet-class>khie.Adder1Servlet</servlet-class>	<!-- Java Resources의 servlet파일 -->
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>abc</servlet-name>	<!-- 위 서블릿 이름과 동일 해야 한다. -->
+  	<url-pattern>/adder1</url-pattern>	<!-- jsp파일에서의 action 값을 맵핑한다 -->
+  </servlet-mapping>
+</web-app>
